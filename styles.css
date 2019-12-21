@@ -9,6 +9,7 @@
 body {
   background: #fff;
   width: 100%;
+  min-height: 100%;
 }
 
 .container{
@@ -17,24 +18,8 @@ body {
 }
 
 li{
-    list-style: none;
-    
+    list-style: none;  
 }
-.top-nav {
-    background: #747ABF;
-    display: flex;
-    justify-content: space-between;
-   
-    height: 6rem;
-}
-
-.logo {
-    width: 25%;
-    padding: 2rem;
-    font-size: 1.5rem;
-    color: #fff;
-}
-
 
 .bolder {
     font-weight: 800;
@@ -43,35 +28,64 @@ li{
 .light {
     font-weight: 100;
 }
-.right-nav {
-    width: 25%;
+.logo {
+    grid-area: logo;
+   
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
 }
-    .right-nav li {
-        display: inline;
-      
-        height: 6rem;
-        width: 6rem;
-    }
-    .right-nav svg {
-        height: 6rem;
-        width: 6rem;
-    }
+
+.offset {
+    grid-area: offset;
+}
+
+.right-nav {
+    grid-area: rightNav;
+   
+
+}
+
+.top-nav {
+    background: #747ABF;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "logo offset rightNav";
+    width: 100%;
+}
+
+
+
+
+
+
+.right-nav  {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+   
+.right-nav svg {
+    height: 6rem;
+   
+}
 img.profile-pic {
     height: 6rem;
-    width: 6rem;
     border-radius: 100%;
 }
 
 li.profile-name {
-padding: 0;
-margin-top: -2rem;
+padding: 1rem;
 }
 
 
 .left-nav {
     background: #4E4D75;
     text-align: center;
- 
+    padding-bottom: 10rem;
 }
     .left-nav svg {
         height: 3.5rem;
@@ -120,12 +134,6 @@ margin-top: -2rem;
 }
 .main-content {
   grid-area: main;
-}
-.item-c {
-  grid-area: sidebar;
-}
-.item-d {
-  grid-area: footer;
 }
 
 .container {
