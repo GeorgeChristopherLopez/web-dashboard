@@ -261,53 +261,34 @@ section.social-stats-section {
     padding: 1rem;
    
 }
-    .message-user input, .message-user textarea, .message-user button {
+    .message-user input, .message-user textarea, .message-user button, .settings-container select, .settings-container option {
         width: 100%;
         padding: 1rem;
+        margin: .51rem 0rem;
     }
 
-    .btn1{
-        grid-area:btn1;
-    }
+  .options{
+      display: grid;
+      grid-template-columns: 40% 30%;
+      grid-gap: 2rem;
+  }
 
-    .option1{
-        grid-area: option1;
-
-    }
-
-    .onoff1{
-        grid-area: onoff1;
-    }
-
-    .timezone{
-        grid-area: timezone;
-    }
-
-
-.btn2 {
-    grid-area: btn2;
+.off1, .off2 {
+    display: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 25%;
+    background-color: #000;
+    color: white;
 }
 
-.option2 {
-    grid-area: option2;
+.on1, .on2 {
+    color: white;
+    width: 4rem;
+    display: flex;
+    border-radius: 25%;
+    background-color: #747ABF;
 }
-
-.onoff2 {
-    grid-area: onoff2;
-}
-
-.settings-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: 
-        "option1 onoff1" 
-        "option2 onoff2" 
-        "timezone timezone"
-        "btn1 btn2";
-    grid-template-rows: auto 1fr auto;
-    padding: 1rem;
-}
-    
 
 .container {
     display: grid;
