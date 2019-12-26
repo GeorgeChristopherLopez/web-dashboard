@@ -266,10 +266,48 @@ section.social-stats-section {
         padding: 1rem;
     }
 
-    .settings ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    .btn1{
+        grid-area:btn1;
     }
+
+    .option1{
+        grid-area: option1;
+
+    }
+
+    .onoff1{
+        grid-area: onoff1;
+    }
+
+    .timezone{
+        grid-area: timezone;
+    }
+
+
+.btn2 {
+    grid-area: btn2;
+}
+
+.option2 {
+    grid-area: option2;
+}
+
+.onoff2 {
+    grid-area: onoff2;
+}
+
+.settings-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+        "option1 onoff1" 
+        "option2 onoff2" 
+        "timezone timezone"
+        "btn1 btn2";
+    grid-template-rows: auto 1fr auto;
+    padding: 1rem;
+}
+    
 
 .container {
     display: grid;
