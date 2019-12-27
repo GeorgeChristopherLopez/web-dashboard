@@ -232,11 +232,18 @@ section.social-stats-section {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "members activity";
 }
-.new-members li {
+
+.member-container img{
+    border-radius: 50%;
+    width: 4rem;
+   margin: 0rem 1rem;
+}
+.member-container li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0;
     text-align: left;
+    margin: 1rem;
 }
 .daily-traffic {
     grid-area: daily;
@@ -262,19 +269,29 @@ section.social-stats-section {
    
 }
     .message-user input, .message-user textarea, .message-user button, .settings-container select, .settings-container option {
+        font-size: 2rem;
         width: 100%;
+        margin: 1rem 0rem;
         padding: 1rem;
-        margin: .51rem 0rem;
     }
 
-  .options{
-      display: grid;
-      grid-template-columns: 40% 30%;
-      grid-gap: 2rem;
-  }
+    .settings-container{
+        margin-top: 1rem;
+    }
+
+    .settings-container option {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: 40% 30%;
+        grid-gap: 2rem;
+    }
 
 .off1, .off2 {
-    display: none;
+
     padding: 0;
     margin: 0;
     border-radius: 25%;
@@ -285,11 +302,54 @@ section.social-stats-section {
 .on1, .on2 {
     color: white;
     width: 4rem;
-    display: flex;
+    
     border-radius: 25%;
     background-color: #747ABF;
 }
 
+.show-btn{
+    display: flex;
+    transition: ease-in 3s;
+}
+
+.hide-btn {
+    display: none;
+    transition: ease-out 3s;
+}
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    grid-gap: 2rem;
+    color: white;
+
+}
+a {
+    text-decoration: none;
+    
+}
+
+.highlight {
+   border-left: solid 5px green;
+   
+}
+
+.highlight svg{
+    margin-left: 5px;
+}
+.btn1{
+    background-color: #747ABF;
+    padding: 1rem;
+}
+
+.btn2{
+    background-color: #4E4D75;
+    padding: 1rem;
+}
+
+.main-content{
+    padding: 1REM;
+}
 .container {
     display: grid;
     grid-template-columns: 10% 90%;
