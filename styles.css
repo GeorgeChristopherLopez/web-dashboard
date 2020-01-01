@@ -230,7 +230,8 @@ section.social-stats-section {
 .member-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "members activity";
+    grid-template-areas: "members members" 
+        "activity activity";
 }
 
 .member-container img{
@@ -255,14 +256,28 @@ section.social-stats-section {
 
 .data-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "daily mobile";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "daily daily" 
+        "mobile mobile";
+    padding: 1rem;
 }
+.settings-container{
+    grid-area: settings;
+
+}
+
+.message-user {
+    grid-area: message;
+}
+
+
 
 .forms-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "message settings";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+        "message message" 
+        "settings settings";
 }
 .message-container, .settings-container{
     padding: 1rem;
@@ -374,6 +389,24 @@ a {
     .left-nav svg{
         height: 2.5rem;
     }
+
+    .data-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "daily mobile";
+    }
+
+    .forms-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "message settings";
+    }
+
+    .member-container {
+   
+        grid-template-areas: "members activity";
+    }
+
 }
 @media screen and (min-width: 1024px){
     .social-stats-container {
